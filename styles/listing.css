@@ -1,0 +1,311 @@
+/* --- Google Fonts Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #ff5a2c; /* Classic college aggregator theme orange */
+    --secondary-color: #0d233a; /* Dark Blue */
+    --text-main: #333333;
+    --text-muted: #666666;
+    --bg-light: #f7f9fc;
+    --white: #ffffff;
+    --shadow: 0 4px 20px rgba(0,0,0,0.05);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* --- Header & Navigation --- */
+.navbar {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+.logo span {
+    color: var(--primary-color);
+}
+.nav-links a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    margin-right: 25px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+}
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+.btn-primary:hover {
+    background-color: #e04a1f;
+    transform: translateY(-2px);
+}
+
+/* --- Hero Banner Section --- */
+.blog-hero {
+    background: linear-gradient(135deg, #0d233a 0%, #1a3c61 100%);
+    color: var(--white);
+    text-align: left;
+    padding: 60px 20px;
+}
+.hero-content max-width {
+    max-width: 700px;
+    margin-left: 0 auto;
+}
+.blog-hero h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+.blog-hero p {
+    font-weight: 300;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+.search-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.search-container input {
+    width: 100%;
+    padding: 15px 20px 15px 50px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    outline: none;
+}
+.search-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 18px;
+}
+
+/* --- Main Layout Grid --- */
+.main-layout {
+    max-width: 1200px;
+    margin: 40px auto;
+    /* display: grid; */
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* Sidebar Categories */
+.sidebar {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    height: fit-content;
+    box-shadow: var(--shadow);
+}
+.sidebar h3 {
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--bg-light);
+    padding-bottom: 10px;
+}
+.category-list {
+    list-style: none;
+}
+.cat-btn {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: var(--transition);
+}
+.cat-btn i {
+    color: var(--text-muted);
+}
+.cat-btn:hover, .cat-btn.active {
+    background-color: rgba(255, 90, 44, 0.1);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+.cat-btn.active i, .cat-btn:hover i {
+    color: var(--primary-color);
+}
+
+/* Blog Cards Grid */
+.blog-grid-container {
+    display: flex;
+    flex-direction: column;
+}
+.grid-header {
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+.blog-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.card-img-wrapper {
+    position: relative;
+    height: 200px;
+}
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.tag {
+    position: absolute;
+    bottom: -48px;
+    right: 0;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 5px 14px 5px;
+    border-radius: 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    display: flex;
+    border-top: 2px solid var(--white);
+    border-right: 2px solid var(--white);
+    border-top-right-radius: 3px;
+    font-size: 14px;
+    /* font-weight: 600; */
+}
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.meta-info {
+    display: flex;
+    gap: 15px;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+.meta-info i {
+    margin-right: 4px;
+}
+.card-content h2 {
+    font-size: 18px;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+.card-content p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+.read-more {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: var(--transition);
+}
+.read-more:hover {
+    gap: 10px;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+}
+footer p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 992px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        position: static;
+    }
+    .category-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .cat-btn {
+        width: auto;
+        margin-bottom: 0;
+    }
+}
+@media (max-width: 600px) {
+    .nav-links, .nav-actions {
+        display: none; /* Simplification for small displays */
+    }
+    .blog-hero h1 {
+        font-size: 26px;
+    }
+}

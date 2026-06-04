@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "title": "Importance of Coding Skills for BCA Students",
+        "src": "https://www.collegedakhla.com/uploads/blogs/best_BCA_colleges_in_Noida.webp",
+        "tag": "College Dakhla",
+        "date": "2026-05-29",
+        "reading_time": "3 Min Read",
+        "slug":"best-bca-colleges-in-noida",
+        "description": "Alice is a software engineer with 5 years of experience in web development. She specializes in frontend technologies and has a passion for creating user-friendly interfaces."
+    },
+        {
+        "id": 2,
+        "title": "How Technology is Transforming Engineering Education",
+        "src": "https://www.collegedakhla.com/uploads/blogs/engineering_colleges_in_Greater_Noida.webp",
+        "tag": "College Dakhla",
+        "date": "2026-05-27",
+        "reading_time": "3 Min Read",
+        "slug":"engineering-colleges-in-greater-noida",
+        "description": "Alice is a software engineer with 5 years of experience in web development. She specializes in frontend technologies and has a passion for creating user-friendly interfaces."
+    },
+        {
+        "id": 3,
+        "title": "B.Tech Fees in Private Colleges - [Updated List]",
+        "src": "https://www.collegedakhla.com/uploads/blogs/B.Tech_Fees_in_Private_Colleges.png",
+        "tag": "College Dakhla",
+        "date": "2026-05-25",
+        "reading_time": "5 Min Read",
+        "slug":"btech-fees-in-private-colleges",
+        "description": "Alice is a software engineer with 5 years of experience in web development. She specializes in frontend technologies and has a passion for creating user-friendly interfaces."
+    },
+        {
+        "id": 4,
+        "title": "Top 5 Universities in India - [Updated List 2026]",
+        "src": "https://www.collegedakhla.com/uploads/blogs/Top_5_Universities_in_India.png",
+        "tag": "College Dakhla",
+        "date": "2026-05-23",
+        "reading_time": "6 Min Read",
+        "slug":"universities-in-india",
+        "description": "Alice is a software engineer with 5 years of experience in web development. She specializes in frontend technologies and has a passion for creating user-friendly interfaces."
+    },
+        {
+        "id": 5,
+        "title": "AI vs Data Science: Understanding the Difference",
+        "src": "https://www.collegedakhla.com/uploads/blogs/AI_and_ML_engineering_colleges_in_India.webp",
+        "tag": "College Dakhla",
+        "date": "2026-05-21",
+        "reading_time": "3 Min Read",
+        "slug":"ai-and-ml-engineering-colleges-in-india",
+        "description": "Alice is a software engineer with 5 years of experience in web development. She specializes in frontend technologies and has a passion for creating user-friendly interfaces."
+    },
+        {
+        "id": 6,
+        "title": "Top 10 Engineering Colleges in Pune: Fees and Placements",
+        "src": "https://www.collegedakhla.com/uploads/blogs/Top_10_engineering_colleges_in_Pune.png",
+        "tag": "College Dakhla",
+        "date": "2026-05-19",
+        "reading_time": "7 Min Read",
+        "slug":"engineering-colleges-in-pune",
+        "description": "Alice is a software engineer with 5 years of experience in web development. She specializes in frontend technologies and has a passion for creating user-friendly interfaces."
+    }  
+]

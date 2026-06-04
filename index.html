@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Dakhla - Blogs & Career Guidance</title>
+     <link rel="stylesheet" href="styles/listing.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">College<span>Dakhla</span></a>
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Colleges</a>
+                <a href="#">Courses</a>
+                <a href="#" class="active">Blogs</a>
+                <a href="#">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="btn-primary">Explore Courses</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="blog-hero">
+        <div class="hero-content">
+            <h1>Blogs</h1>
+        </div>
+                
+    </section>
+
+    <main class="main-layout">
+
+        <section class="blog-grid-container">
+            
+            <div class="blog-grid"  id="blog-container">
+                
+        
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 CollegeDakhla. All rights reserved. Designed for optimal guidance.</p>
+        </div>
+    </footer>
+
+    <script>
+        async function renderBlogs() {
+            const container = document.getElementById('blog-container');
+
+            try {
+                // Fetch your external json file
+               const response = await fetch('rawdata/data.json');
+        
+        // Check if the file path is correct and accessible
+        if (!response.ok) {
+            throw new Error(`Could not find the file. HTTP status: ${response.status}`);
+        }
+
+        // 2. Parse the incoming response stream into a real JavaScript array
+        const data = await response.json();
+        
+        // 3. This will now successfully log your actual array of objects!
+        console.log("Fetched Blog Data:", data); // Debug log to check the fetched data
+                // Run the map function
+                const htmlContent = data.map(blog => {
+                    // Return a clean HTML string for each item
+                    return `
+                    <article class="blog-card" data-category="engineering" >
+                        <div class="card-img-wrapper">
+                            <img src="${blog.src}" alt="${blog.title}">
+                            <span class="tag">${new Date(blog.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="meta-info">
+                                <span><i class="fa fa-tags"></i> ${blog.tag}</span>
+                                <span><i class="fa-regular fa-clock"></i> ${blog.reading_time}</span>
+                            </div>
+                            <h2>${blog.title}</h2>
+                            <a href="/${blog.slug}" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <hr style="border:0; border-top:1px solid #eee; margin:0;">
+                        </article>
+                    `;
+                }).join(''); // .join('') removes commas from the array output
+
+                // Inject the generated HTML into the <article> tag
+                container.innerHTML = htmlContent;
+
+            } catch (error) {
+                console.error("Error loading blog data:", error);
+                container.innerHTML = "<p>Failed to load blog entries.</p>";
+            }
+        }
+
+        // Initialize function
+        renderBlogs();
+    </script>
+</body>
+</html>

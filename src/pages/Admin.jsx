@@ -5,6 +5,7 @@ import {
     deleteBlog,
     updateBlog,
 } from "../utils/blogStorage";
+import Header from "../components/Header";
 
 export default function Admin() {
     const [blogs, setBlogs] = useState([]);
@@ -62,6 +63,10 @@ export default function Admin() {
     };
 
     return (
+        <>
+            <Header />
+        <a href="/" className="back-link">
+            <strong> &larr; Back to Blogs</strong></a>
         <div style={{ padding: 20 }}>
             <h2>Admin Panel</h2>
 
@@ -92,6 +97,7 @@ export default function Admin() {
             {blogs.map((blog) => (
                 <div key={blog.id} style={{ marginBottom: 20 }}>
                     <h3>{blog.title}</h3>
+                    <img width="200" src={blog.src} alt={blog.title} />
 
                     <button onClick={() => handleEdit(blog)}>Edit</button>
                     <button onClick={() => deleteBlog(blog.id) || refresh()}>
@@ -100,5 +106,6 @@ export default function Admin() {
                 </div>
             ))}
         </div>
+        </>
     );
 }

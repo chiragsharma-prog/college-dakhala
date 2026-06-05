@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { getBlogs } from "../utils/blogStorage";
+import Header from "../components/Header";
 import "../styles/detail.css";
 
 export default function BlogDetails() {
@@ -12,6 +13,10 @@ export default function BlogDetails() {
     }
 
     return (
+        <>
+            <Header />
+            <a href="/" className="back-link">
+            <strong> &larr; Back to Blogs</strong></a>
         <main className="container main-layout">
             <article className="blog-post">
                 <h1 className="post-title">{blog.title}</h1>
@@ -30,5 +35,6 @@ export default function BlogDetails() {
                 />
             </article>
         </main>
+              </>
     );
 }

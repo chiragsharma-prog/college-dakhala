@@ -14,14 +14,14 @@
 .navbar {
     background-color: var(--white);
     box-shadow: var(--shadow);
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 50px;
+    padding-right: 50px;
     position: sticky;
     top: 0;
     z-index: 1000;
     border-bottom-width: 1px;
     border-bottom-style: dotted;
-    max-width: 1424px;
+    /* max-width: 1424px; */
     margin: 0 auto;
     border-bottom-color: var(--text-muted);
 }
